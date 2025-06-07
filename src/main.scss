@@ -1,0 +1,91 @@
+@import 'normalize.css';
+
+.container {
+  margin: 0 auto;
+  padding: 0 58px;
+  position: relative;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, h1, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.section-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-weight: 400;
+
+
+  &--white {
+    color: #FFFFFF;
+    margin-bottom: 0;
+  }
+}
+
+.input-error-message {
+  margin-top: 5px;
+  color: #ff0000;
+}
+
+
+@media (min-width: 360px) {
+  .container {
+    max-width: 360px;
+    padding: 0 16px;
+  }
+
+  .section-header {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .input-error-message {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 25px;
+  }
+
+  .section-header {
+    font-size: 80px;
+    margin-bottom: 80px;
+  }
+
+  .input-error-message {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 58px;
+  }
+
+  .section-header {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .container {
+    max-width: 1360px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}

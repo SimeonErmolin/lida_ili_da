@@ -1,0 +1,140 @@
+.footer-wrapper {
+  background: #000000;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+      text-transform: uppercase;
+      font-size: 69px;
+      font-weight: 400;;
+    }
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &--links {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+  &__logo {
+    width: 250px;
+  }
+}
+
+@media (min-width: 360px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    font-size: 12px;
+
+
+    &__section {
+      width: 100%;
+
+      &--header {
+        font-size: 30px;
+      }
+      &--content {
+        margin-top: 20px;
+      }
+    }
+
+    &__logo {
+      width: 75px;
+      position: absolute;
+      top: 45%;
+      right: 5%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__logo {
+      width: 150px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    font-size: 20px;
+
+    &__section {
+      width: 100%;
+
+      &--header {
+        font-size: 69px;
+      }
+      &--content {
+        margin-top: 40px;
+      }
+    }
+
+    &__logo {
+      width: 250px;
+      position: absolute;
+      top: 60%;
+      right: 5%;
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__section {
+      width: auto;
+
+      &--header {
+        font-size: 52px;
+      }
+    }
+
+    &__logo {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer {
+    &__section {
+      &--header {
+        font-size: 69px;
+      }
+    }
+
+    &__logo {
+      width: 250px;
+    }
+  }
+}

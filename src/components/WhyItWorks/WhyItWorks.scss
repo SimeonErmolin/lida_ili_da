@@ -1,0 +1,216 @@
+.why-it-works-wrapper {
+  .why-it-works {
+    &__cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &--card {
+        padding: 120px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.50);
+
+        color: #000;
+        text-align: center;
+        font-family: 'Exo 2', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        .description {
+          margin-top: 16px;
+          font-size: 32px;
+          font-weight: 500;
+          text-transform: none;
+        }
+
+        &.purple {
+          background: #6365EF;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .wanna-do {
+      margin-top: 80px;
+      text-align: center;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 500;
+    }
+
+    &__btns {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+
+      overflow: hidden;
+      text-align: center;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+
+      &--btn {
+        width: 35%;
+        border: none;
+        background-color: #000000;
+        color: #FFFFFF;
+        text-decoration: none;
+
+        &.white {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          background-color: #FFFFFF;
+          color: #000000;
+          border: 1px solid #000000;
+
+          img {
+            width: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .why-it-works-wrapper {
+    margin-top: 100px;
+
+    .why-it-works {
+      &__cards {
+        flex-direction: column;
+        gap: 20px;
+
+        &--card {
+          width: 100%;
+          font-size: 26px;
+
+          .description {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .wanna-do {
+        font-size: 28px;
+      }
+
+      &__btns {
+        flex-direction: column;
+        font-size: 18px;
+        gap: 15px;
+
+        &--btn {
+          border-radius: 20px;
+          padding: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .why-it-works-wrapper {
+    margin-top: 200px;
+
+    .why-it-works {
+      &__cards {
+        flex-direction: row;
+
+        &--card {
+          width: 40%;
+        }
+      }
+
+      .wanna-do {
+        font-size: 50px;
+      }
+
+      &__btns {
+        flex-direction: row;
+        font-size: 18px;
+        gap: 26px;
+
+        &--btn {
+          border-radius: 28px;
+          padding: 24px;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-it-works-wrapper {
+    .why-it-works {
+      &__cards {
+        &--card {
+          font-size: 32px;
+
+          .description {
+            font-size: 24px;
+          }
+        }
+      }
+
+      &__btns {
+        font-size: 24px;
+
+        &--btn {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .why-it-works-wrapper {
+    .why-it-works {
+      &__cards {
+        gap: 42px;
+
+        &--card {
+          font-size: 50px;
+
+          .description {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .wanna-do {
+        font-size: 60px;
+      }
+
+      &__btns {
+        font-size: 32px;
+
+        &--btn {
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .why-it-works-wrapper {
+    .why-it-works {
+      &__cards {
+        gap: 62px;
+
+        &--card {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}

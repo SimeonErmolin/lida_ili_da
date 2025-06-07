@@ -1,0 +1,89 @@
+.cards-section {
+  margin-top: 111px;
+
+  .cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card {
+      background: #F5F7FA;
+      border: 1px solid #EDEDED;
+      border-radius: 32px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      text-align: center;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &__1 {
+        background-image: url("../../assets/bg/how-it-works/1.svg");
+      }
+      &__2 {
+        background-image: url("../../assets/bg/how-it-works/2.svg");
+
+      }
+      &__3 {
+        background-image: url("../../assets/bg/how-it-works/3.svg");
+      }
+      &__4 {
+        background-image: url("../../assets/bg/how-it-works/4.svg");
+      }
+    }
+  }
+
+  @media (min-width: 360px) {
+    .cards {
+      gap: 12px;
+
+      .card {
+        height: 200px;
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .cards {
+      gap: 44px;
+
+      .card {
+        padding: 10px;
+        height: 338px;
+        width: 43%;
+        font-size: 28px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .cards {
+      .card {
+        padding: 0;
+        height: 445px;
+        width: 43%;
+      }
+    }
+  }
+  @media (min-width: 1360px) {
+    .cards {
+      .card {
+        width: 33%;
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    .cards {
+      .card {
+        width: 23%;
+      }
+    }
+  }
+}
