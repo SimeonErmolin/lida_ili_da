@@ -11,6 +11,23 @@
     gap: 28px;
   }
 
+  .animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease;
+    &.top {
+      transform: translateY(-40px);
+    }
+    &.bottom {
+      transform: translateY(40px);
+    }
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
   .contacts-title {
     color: #000;
     font-style: normal;

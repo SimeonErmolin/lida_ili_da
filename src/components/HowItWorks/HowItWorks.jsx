@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './HowItWorks.scss';
 
 const HowItWorks = () => {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect(); // Анимация срабатывает один раз
+        }
+      },
+      {
+        threshold: 0.5, // Анимация начнётся, когда 50% блока видно
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div id="how-it-works" className="container cards-section">
+    <div
+      id="how-it-works"
+      className={`container cards-section ${visible ? 'animate' : ''}`}
+      ref={sectionRef}
+    >
       <h3 className="section-header">как это работает</h3>
       <div className="cards">
         <div className="card card__1">

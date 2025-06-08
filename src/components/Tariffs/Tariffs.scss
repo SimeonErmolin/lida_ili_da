@@ -6,6 +6,17 @@
   background-size: cover;
 }
 
+.tariffs-wrapper {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.tariffs-wrapper.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .tariffs-block {
   padding: 60px;
   border-radius: 44px;

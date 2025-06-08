@@ -1,9 +1,50 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Tariffs.scss';
 
 const Tariffs = () => {
+  const sectionRef = useRef(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasScrolled) {
+          setHasScrolled(true);
+
+          document.body.style.overflow = 'hidden';
+          sectionRef.current.classList.add('visible');
+
+          const sectionTop =
+            sectionRef.current.getBoundingClientRect().top +
+            window.scrollY -
+            100;
+
+          window.scrollTo({
+            top: sectionTop,
+            behavior: 'smooth',
+          });
+
+          setTimeout(() => {
+            document.body.style.overflow = 'auto';
+            setHasScrolled(true);
+          }, 800);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const el = sectionRef.current;
+    if (el) observer.observe(el);
+
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, [hasScrolled]);
+
   return (
-    <div className="tariffs-wrapper">
+    <div className="tariffs-wrapper" ref={sectionRef}>
       <div className="container">
         <div className="tariffs-block">
           <h3 className="section-header section-header--white">Тарифы</h3>

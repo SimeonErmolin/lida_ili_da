@@ -30,10 +30,10 @@ const ContactsForm = () => {
 
   const onSubmitForm = async (data) => {
     try {
-      const response = await fetch('http://62.113.36.252/api/application/', {
+      const response = await fetch('http://62.113.36.252/api/application', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // обязательно указываем тип контента
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });

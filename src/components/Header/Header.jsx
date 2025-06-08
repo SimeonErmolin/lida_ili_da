@@ -53,7 +53,7 @@ const Header = () => {
               Оставить заявку
             </a>
             <a
-              href="#how-it-works"
+              href="#presentation"
               className="header-btns__btn header-btns__btn--transparent"
             >
               <p>Посмотреть как это работает</p>

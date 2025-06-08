@@ -1,14 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Contacts.scss';
 import ContactsForm from './components/ContactsForm.jsx';
 
 const Contacts = () => {
+  const contactRef = useRef(null);
+  const formRef = useRef(null);
+
+  const [contactVisible, setContactVisible] = useState(false);
+  const [formVisible, setFormVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === contactRef.current && entry.isIntersecting) {
+            setContactVisible(true);
+          }
+          if (entry.target === formRef.current && entry.isIntersecting) {
+            setFormVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contactRef.current) observer.observe(contactRef.current);
+    if (formRef.current) observer.observe(formRef.current);
+
+    return () => {
+      if (contactRef.current) observer.unobserve(contactRef.current);
+      if (formRef.current) observer.unobserve(formRef.current);
+    };
+  }, []);
+
   return (
     <div id="contacts" className="container contacts-wrapper">
       <h3 className="section-header">контакты</h3>
 
       <div className="contacts">
-        <div className="contact-us contact-block">
+        <div
+          ref={contactRef}
+          className={`contact-us contact-block animate top ${contactVisible ? 'visible' : ''}`}
+        >
           <h4 className="contacts-title contacts-title__us">
             Свяжитесь с нами
           </h4>
@@ -75,9 +108,11 @@ const Contacts = () => {
           </div>
         </div>
 
-        <div className="contacts-form contact-block">
+        <div
+          ref={formRef}
+          className={`contacts-form contact-block animate bottom ${formVisible ? 'visible' : ''}`}
+        >
           <h4 className="contacts-title">Оставьте заявку</h4>
-
           <ContactsForm />
         </div>
       </div>

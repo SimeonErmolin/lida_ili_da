@@ -1,7 +1,17 @@
 .cards-section {
   margin-top: 111px;
 
+  &.animate {
+    .cards {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .cards {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -21,6 +31,34 @@
       font-weight: 600;
       text-align: center;
 
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      p {
+        z-index: 1;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 0;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover p {
+        color: #fff;
+      }
+
       background-repeat: no-repeat;
       background-size: contain;
 
@@ -29,7 +67,6 @@
       }
       &__2 {
         background-image: url("../../assets/bg/how-it-works/2.svg");
-
       }
       &__3 {
         background-image: url("../../assets/bg/how-it-works/3.svg");
