@@ -110,8 +110,8 @@ const PresentationChat = ({ chatIsVisible }) => {
 
   const isInputEmpty = inputValue.trim() === '';
   const sendIcon = isInputEmpty
-    ? '../../../../public/assets/presentation/microphone.png'
-    : '../../../../public/assets/presentation/send-white.png';
+    ? '/assets/presentation/microphone.png'
+    : '/assets/presentation/send-white.png';
 
   const scrollToBottom = () => {
     if (chatWrapperRef.current) {

@@ -65,13 +65,9 @@ const Header = () => {
           className="background-iphone"
         />
 
-        <video
-          className="background-video"
-          src="/assets/bg/header/video-header.mp4"
-          autoPlay
-          muted
-          playsInline
-        />
+        <video className="background-video" autoPlay muted playsInline>
+          <source src="/assets/bg/header/video-header.mp4" type="video/mp4" />
+        </video>
 
         <div className="flying-blocks">
           <div className="flying-block flying-block__1">
