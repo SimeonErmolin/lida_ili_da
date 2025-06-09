@@ -1,18 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './MediaAboutUs.scss';
 
 const MediaAboutUs = () => {
-  const cardsRef = useRef([]);
+  const cardsRef = useRef(null);
   const whiteLineRef = useRef(null);
   const purpleLineRef = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.target.classList.contains('medias-container__item')) {
-              entry.target.classList.add('visible');
+            if (entry.target === cardsRef.current) {
+              setVisible(true);
+              cardsRef.current.classList.add('visible');
             }
             if (entry.target === whiteLineRef.current) {
               whiteLineRef.current.classList.add('visible');
@@ -26,7 +28,7 @@ const MediaAboutUs = () => {
       { threshold: 0.2 }
     );
 
-    cardsRef.current.forEach((el) => el && observer.observe(el));
+    if (cardsRef.current) observer.observe(cardsRef.current);
     if (whiteLineRef.current) observer.observe(whiteLineRef.current);
     if (purpleLineRef.current) observer.observe(purpleLineRef.current);
 
@@ -49,18 +51,17 @@ const MediaAboutUs = () => {
       <div className="container media-about-us-wrapper">
         <h3 className="section-header">сми о нас</h3>
 
-        <div className="medias-container">
+        <div
+          className={`medias-container ${visible ? 'visible' : ''}`}
+          ref={cardsRef}
+        >
           {mediaItems.map((media, index) => (
-            <div
-              className="medias-container__item"
-              key={media.name}
-              ref={(el) => (cardsRef.current[index] = el)}
-            >
+            <div className="medias-container__item" key={media.name}>
               <div
                 className={`medias-container__item--img ${media.class || ''}`}
               >
                 <img
-                  src={`../../../src/assets/mediaAboutUs/${media.img}`}
+                  src={`../../../public/assets/mediaAboutUs/${media.img}`}
                   alt={media.name}
                 />
               </div>
@@ -73,13 +74,13 @@ const MediaAboutUs = () => {
       <div className="lines">
         <img
           ref={whiteLineRef}
-          src="../../../src/assets/mediaAboutUs/whiteLine.svg"
+          src="../../../public/assets/mediaAboutUs/whiteLine.svg"
           alt=""
           className="lines__white"
         />
         <img
           ref={purpleLineRef}
-          src="../../../src/assets/mediaAboutUs/purpleLine.svg"
+          src="../../../public/assets/mediaAboutUs/purpleLine.svg"
           alt=""
           className="lines__purple"
         />

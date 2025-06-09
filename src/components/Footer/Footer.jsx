@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <img
-          src="../../../src/assets/logo/whiteLogo.png"
+          src="../../../public/assets/logo/whiteLogo.png"
           alt=""
           className="footer__logo"
         />
@@ -26,7 +26,7 @@ const Footer = () => {
           <h4 className="footer__section--header">документы</h4>
           <div className="footer__section--content">
             <a
-              href="/assets/offer_with_guarantee.pdf"
+              href="/offer_with_guarantee.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__section--links"

@@ -58,22 +58,22 @@ const Tariffs = () => {
               <div className="tariff__main">
                 <div className="tariff__main--list">
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Настройка рекламы</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Использование ИИ-бота</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Еженедельный отчёт о лидах</p>
                   </div>
 
                   <div className="item item__disable">
-                    <img src="../../../src/assets/icons/snow.svg" alt="" />
+                    <img src="../../../public/assets/icons/snow.svg" alt="" />
                     <p>
                       При подключении конкурента — <br />
                       отключаем
@@ -100,12 +100,12 @@ const Tariffs = () => {
               <div className="tariff__main">
                 <div className="tariff__main--list">
                   <div className="item">
-                    <img src="../../../src/assets/icons/star.svg" alt="" />
+                    <img src="../../../public/assets/icons/star.svg" alt="" />
                     <p>Всё из тарифа «Старт»</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>
                       Ретаргетинг + 3 рекламные <br />
                       связки
@@ -113,27 +113,27 @@ const Tariffs = () => {
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Подключение Google-таблицы</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>UTM-конструктор</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Лид-трекер с аналитикой</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Приоритет в поддержке</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Обучение менеджера</p>
                   </div>
                 </div>
@@ -154,37 +154,37 @@ const Tariffs = () => {
               <div className="tariff__main">
                 <div className="tariff__main--list">
                   <div className="item">
-                    <img src="../../../src/assets/icons/star.svg" alt="" />
+                    <img src="../../../public/assets/icons/star.svg" alt="" />
                     <p>Всё из тарифа «Стандарт»</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Ведение паблика ВК</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>А/В тесты креативов</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>УТП под Ваш магазин</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Аудит по прибыли (6ч/мес)</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Подключение менеджера в боте</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Интеграция в CRM</p>
                   </div>
                 </div>
@@ -204,12 +204,12 @@ const Tariffs = () => {
               <div className="tariff__main">
                 <div className="tariff__main--list">
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Создание группы ВК</p>
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>
                       Создание/редизайн <br />
                       лендинга
@@ -217,7 +217,7 @@ const Tariffs = () => {
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>
                       Написание кастомного бота <br />с Chat GPT, решающего Ваши{' '}
                       <br />
@@ -226,7 +226,7 @@ const Tariffs = () => {
                   </div>
 
                   <div className="item">
-                    <img src="../../../src/assets/icons/circle.svg" alt="" />
+                    <img src="../../../public/assets/icons/circle.svg" alt="" />
                     <p>Аудит: поиск точек роста</p>
                   </div>
                 </div>

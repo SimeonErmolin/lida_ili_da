@@ -1,7 +1,7 @@
 .tariffs-wrapper {
   margin-top: 200px;
   padding: 60px 0;
-  background-image: url('../../assets/tariffs/bg.jpg');
+  background-image: url('../../../public/assets/tariffs/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,16 +37,16 @@
     background-size: contain;
 
     &--base {
-      background-image: url("../../assets/tariffs/base.png");
+      background-image: url("../../../public/assets/tariffs/base.png");
     }
     &--optimal {
-      background-image: url("../../assets/tariffs/optimal.png");
+      background-image: url("../../../public/assets/tariffs/optimal.png");
     }
     &--maximum {
-      background-image: url("../../assets/tariffs/maximum.png");
+      background-image: url("../../../public/assets/tariffs/maximum.png");
     }
     &--one-time {
-      background-image: url("../../assets/tariffs/one-time.png");
+      background-image: url("../../../public/assets/tariffs/one-time.png");
     }
 
     &__header {

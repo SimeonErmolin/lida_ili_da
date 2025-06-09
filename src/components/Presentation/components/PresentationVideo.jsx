@@ -11,7 +11,7 @@ const PresentationVideo = ({ onEnded, onClick }) => {
       playsInline
     >
       <source
-        src="../../../../src/assets/presentation/videolidilida.mp4"
+        src="../../../../public/assets/presentation/videolidilida.mp4"
         type="video/mp4"
       />
     </video>

@@ -1,6 +1,6 @@
 .guarantee {
   padding: 60px;
-  background-image: url('../../assets/bg/guarantee/guarantee.jpg');
+  background-image: url('../../../public/assets/bg/guarantee/guarantee.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -60,7 +60,7 @@
       position: relative;
       display: flex;
       gap: 50px;
-      background-image: url('../../assets/bg/guarantee/case.png');
+      background-image: url('../../../public/assets/bg/guarantee/case.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position-x: right;
@@ -255,7 +255,7 @@
       align-items: flex-start;
       text-align: left;
       color: #FFFFFF;
-      background-image: url('../../assets/bg/guarantee/guarantee-title.png');
+      background-image: url('../../../public/assets/bg/guarantee/guarantee-title.png');
 
       &--title {
         padding: 0;

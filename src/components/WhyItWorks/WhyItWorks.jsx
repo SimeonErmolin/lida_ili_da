@@ -14,7 +14,7 @@ const WhyItWorks = () => {
         }
       },
       {
-        threshold: 0.5,
+        threshold: 0.3,
       }
     );
 
@@ -71,7 +71,7 @@ const WhyItWorks = () => {
           </a>
           <a href="#presentation" className="why-it-works__btns--btn white">
             <p>Протестировать бота</p>
-            <img src="../../../src/assets/icons/arrowRightBlack.svg" />
+            <img src="../../../public/assets/icons/arrowRightBlack.svg" />
           </a>
         </div>
       </div>

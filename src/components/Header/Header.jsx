@@ -5,7 +5,11 @@ const Header = () => {
   return (
     <div className="header-wrapper">
       <div className="container header">
-        <img src="../../../src/assets/logo/logo.png" alt="" className="logo" />
+        <img
+          src="../../../public/assets/logo/logo.png"
+          alt=""
+          className="logo"
+        />
         <div>
           <h1 className="page-header">
             целевые заявки <br />
@@ -15,7 +19,7 @@ const Header = () => {
             <p className="page-header-addon__text">от нашего </p>
             <a href="#presentation" className="page-header-addon__btn">
               <img
-                src="../../../src/assets/icons/mingcute_ai-fill.svg"
+                src="../../../public/assets/icons/mingcute_ai-fill.svg"
                 alt=""
               />
               <p>ИИ-бота</p>
@@ -29,17 +33,17 @@ const Header = () => {
 
             <div className="header-list__list">
               <div className="header-list__list--item">
-                <img src="../../../src/assets/icons/checkMark.svg" alt="" />
+                <img src="../../../public/assets/icons/checkMark.svg" alt="" />
                 <p>Эмпатично консультирует</p>
               </div>
 
               <div className="header-list__list--item">
-                <img src="../../../src/assets/icons/checkMark.svg" alt="" />
+                <img src="../../../public/assets/icons/checkMark.svg" alt="" />
                 <p>Вовлекает, прогревает</p>
               </div>
 
               <div className="header-list__list--item">
-                <img src="../../../src/assets/icons/checkMark.svg" alt="" />
+                <img src="../../../public/assets/icons/checkMark.svg" alt="" />
                 <p>Отсеивает «холодные» запросы</p>
               </div>
             </div>
@@ -57,20 +61,20 @@ const Header = () => {
               className="header-btns__btn header-btns__btn--transparent"
             >
               <p>Посмотреть как это работает</p>
-              <img src="../../../src/assets/icons/arrowRight.svg" alt="" />
+              <img src="../../../public/assets/icons/arrowRight.svg" alt="" />
             </a>
           </div>
         </div>
 
         <img
-          src="../../../src/assets/bg/header/static-iphone.svg"
+          src="../../../public/assets/bg/header/static-iphone.svg"
           alt=""
           className="background-iphone"
         />
 
         <video
           className="background-video"
-          src="../../../src/assets/bg/header/video-header.mp4"
+          src="../../../public/assets/bg/header/video-header.mp4"
           autoPlay
           muted
           playsInline

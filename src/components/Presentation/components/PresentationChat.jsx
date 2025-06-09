@@ -110,8 +110,8 @@ const PresentationChat = ({ chatIsVisible }) => {
 
   const isInputEmpty = inputValue.trim() === '';
   const sendIcon = isInputEmpty
-    ? '../../../../src/assets/presentation/microphone.png'
-    : '../../../../src/assets/presentation/send-white.png';
+    ? '../../../../public/assets/presentation/microphone.png'
+    : '../../../../public/assets/presentation/send-white.png';
 
   const scrollToBottom = () => {
     if (chatWrapperRef.current) {
@@ -158,7 +158,7 @@ const PresentationChat = ({ chatIsVisible }) => {
               onClick={handleUnavailableFeature}
             >
               <img
-                src="../../../../src/assets/presentation/skrepka.png"
+                src="../../../../public/assets/presentation/skrepka.png"
                 alt="Скрепка"
               />
             </button>
@@ -176,7 +176,7 @@ const PresentationChat = ({ chatIsVisible }) => {
                 onClick={handleUnavailableFeature}
               >
                 <img
-                  src="../../../../src/assets/presentation/stickers.png"
+                  src="../../../../public/assets/presentation/stickers.png"
                   alt="Стикеры"
                 />
               </button>
