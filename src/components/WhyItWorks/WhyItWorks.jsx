@@ -71,7 +71,7 @@ const WhyItWorks = () => {
           </a>
           <a href="#presentation" className="why-it-works__btns--btn white">
             <p>Протестировать бота</p>
-            <img src="../../../public/assets/icons/arrowRightBlack.svg" />
+            <img src="/assets/icons/arrowRightBlack.svg" />
           </a>
         </div>
       </div>

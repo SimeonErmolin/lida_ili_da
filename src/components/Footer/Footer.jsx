@@ -17,11 +17,7 @@ const Footer = () => {
             <p>ОГРН 325690000017980</p>
           </div>
         </div>
-        <img
-          src="../../../public/assets/logo/whiteLogo.png"
-          alt=""
-          className="footer__logo"
-        />
+        <img src="/assets/logo/whiteLogo.png" alt="" className="footer__logo" />
         <div className="footer__section">
           <h4 className="footer__section--header">документы</h4>
           <div className="footer__section--content">

@@ -47,14 +47,14 @@ const Contacts = () => {
           </h4>
 
           <div className="contacts-item__description">
-            <img src="../../../public/assets/icons/telegram.svg" alt="" />
+            <img src="/assets/icons/telegram.svg" alt="" />
             <p className="contacts-item__title">Telegram</p>
           </div>
 
           <div className="contacts-item">
             <p className="contacts-item__title">Максим, СEO «Лида или да»</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>maks@lidailida.ru</p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Contacts = () => {
           <div className="contacts-item">
             <p className="contacts-item__title">Общий адрес</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>hello@lidailida.ru</p>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Contacts = () => {
           <div className="contacts-item">
             <p className="contacts-item__title">Рекламный отдел</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>ads@lidailida.ru</p>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Contacts = () => {
           <div className="contacts-item">
             <p className="contacts-item__title">Отдел разработки ИИ</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>ai@lidailida.ru</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Contacts = () => {
           <div className="contacts-item">
             <p className="contacts-item__title">Сотрудничество</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>partners@lidailida.ru</p>
             </div>
           </div>
@@ -94,13 +94,13 @@ const Contacts = () => {
           <div className="contacts-item">
             <p className="contacts-item__title">Вакансии</p>
             <div className="contacts-item__description">
-              <img src="../../../public/assets/icons/email.svg" alt="" />
+              <img src="/assets/icons/email.svg" alt="" />
               <p>jobs@lidailida.ru</p>
             </div>
           </div>
 
           <div className="contacts-item__phones">
-            <img src="../../../public/assets/icons/phone.svg" alt="" />
+            <img src="/assets/icons/phone.svg" alt="" />
             <div>
               <p>+7 (968) 882-51-03</p>
               <p>+7 (995) 000-53-03</p>

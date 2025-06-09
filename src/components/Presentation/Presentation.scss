@@ -23,7 +23,7 @@
 
 .chat-section {
   z-index: 1;
-  background: url("../../../public/assets/presentation/background.svg") no-repeat center/cover;
+  background: url("/public/assets/presentation/background.svg") no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@
     height: 90%;
     max-height: 770px;
     z-index: 2;
-    background: url("../../../public/assets/presentation/telegrambg.svg") no-repeat center/cover;
+    background: url("/public/assets/presentation/telegrambg.svg") no-repeat center/cover;
     border-radius: 40px;
 
     overflow-y: scroll;
@@ -350,7 +350,7 @@
     position: relative;
 
     border-radius: 24px;
-    background-image: url("../../../public/assets/bg/contacts.jpg");
+    background-image: url("/public/assets/bg/contacts.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #FFFFFF;

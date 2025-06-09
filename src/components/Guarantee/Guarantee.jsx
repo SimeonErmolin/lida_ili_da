@@ -64,19 +64,19 @@ const Guarantee = () => {
             </div>
 
             <img
-              src="../../../public/assets/bg/guarantee/graph.png"
+              src="/assets/bg/guarantee/graph.png"
               alt=""
               className="case-graph"
             />
 
             <img
-              src="../../../public/assets/bg/guarantee/dot.png"
+              src="/assets/bg/guarantee/dot.png"
               alt=""
               className="case-graph-dot"
             />
 
             <button className="case-btn" onClick={() => setModalIsOpen(true)}>
-              <img src="../../../public/assets/icons/caseBtn.svg" alt="" />
+              <img src="/assets/icons/caseBtn.svg" alt="" />
             </button>
           </div>
         </div>

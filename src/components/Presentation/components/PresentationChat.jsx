@@ -157,10 +157,7 @@ const PresentationChat = ({ chatIsVisible }) => {
               className="footer-btn footer-btn__skrepka"
               onClick={handleUnavailableFeature}
             >
-              <img
-                src="../../../../public/assets/presentation/skrepka.png"
-                alt="Скрепка"
-              />
+              <img src="/assets/presentation/skrepka.png" alt="Скрепка" />
             </button>
 
             <div className="chat-footer__inner--input">
@@ -175,10 +172,7 @@ const PresentationChat = ({ chatIsVisible }) => {
                 className="footer-btn footer-btn__stickers"
                 onClick={handleUnavailableFeature}
               >
-                <img
-                  src="../../../../public/assets/presentation/stickers.png"
-                  alt="Стикеры"
-                />
+                <img src="/assets/presentation/stickers.png" alt="Стикеры" />
               </button>
             </div>
 

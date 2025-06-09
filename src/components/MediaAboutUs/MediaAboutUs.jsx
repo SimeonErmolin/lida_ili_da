@@ -61,7 +61,7 @@ const MediaAboutUs = () => {
                 className={`medias-container__item--img ${media.class || ''}`}
               >
                 <img
-                  src={`../../../public/assets/mediaAboutUs/${media.img}`}
+                  src={`/assets/mediaAboutUs/${media.img}`}
                   alt={media.name}
                 />
               </div>
@@ -74,13 +74,13 @@ const MediaAboutUs = () => {
       <div className="lines">
         <img
           ref={whiteLineRef}
-          src="../../../public/assets/mediaAboutUs/whiteLine.svg"
+          src="/assets/mediaAboutUs/whiteLine.svg"
           alt=""
           className="lines__white"
         />
         <img
           ref={purpleLineRef}
-          src="../../../public/assets/mediaAboutUs/purpleLine.svg"
+          src="/assets/mediaAboutUs/purpleLine.svg"
           alt=""
           className="lines__purple"
         />

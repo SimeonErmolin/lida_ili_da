@@ -10,10 +10,7 @@ const PresentationVideo = ({ onEnded, onClick }) => {
       className="video"
       playsInline
     >
-      <source
-        src="../../../../public/assets/presentation/videolidilida.mp4"
-        type="video/mp4"
-      />
+      <source src="/assets/presentation/videolidilida.mp4" type="video/mp4" />
     </video>
   );
 };
