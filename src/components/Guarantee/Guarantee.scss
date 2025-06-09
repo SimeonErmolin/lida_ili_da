@@ -11,6 +11,15 @@
 
   font-family: 'Exo 2', sans-serif;
 
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -56,6 +65,15 @@
       background-repeat: no-repeat;
       background-position-x: right;
       font-weight: 600;
+
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 1s ease-in-out 0.8s, opacity 0.5s ease-in-out 0.8s;
+
+      &.moved {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
       .case-description {
         font-weight: 400;

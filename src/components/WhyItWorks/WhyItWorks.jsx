@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './WhyItWorks.scss';
 
 const WhyItWorks = () => {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="container why-it-works-wrapper">
+    <div
+      className={`container why-it-works-wrapper ${visible ? 'animate' : ''}`}
+      ref={sectionRef}
+    >
       <h3 className="section-header">почему это работает</h3>
 
       <div className="why-it-works">
@@ -23,7 +49,7 @@ const WhyItWorks = () => {
             </p>
           </div>
 
-          <div className="why-it-works__cards--card purple">
+          <div className="why-it-works__cards--card purple purple__second">
             <p>Специальность</p>
             <p className="description">только двери</p>
           </div>

@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Header />
       <HowItWorks />
       <Guarantee />
@@ -20,7 +20,7 @@ function App() {
       <MediaAboutUs />
       <Contacts />
       <Footer />
-    </>
+    </div>
   );
 }
 

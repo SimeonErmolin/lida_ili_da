@@ -11,9 +11,17 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: #FFFFFF;
+}
+
 html, body, h1, h3, h4, p {
   margin: 0;
   padding: 0;
+}
+
+.App {
+  background: #FFFFFF;
 }
 
 .section-header {

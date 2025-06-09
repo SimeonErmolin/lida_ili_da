@@ -10,11 +10,11 @@ const HowItWorks = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // Анимация срабатывает один раз
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.5, // Анимация начнётся, когда 50% блока видно
+        threshold: 0.5,
       }
     );
 

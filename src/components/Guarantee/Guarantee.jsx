@@ -1,14 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Guarantee.scss';
 import TemplateModal from '../TemplateModal/TemplateModal.jsx';
 import ModalGuarantee from './components/ModalGuarantee.jsx';
 
 const Guarantee = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [showMain, setShowMain] = useState(false);
+  const [moveCase, setMoveCase] = useState(false);
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowMain(true);
+          setTimeout(() => {
+            setMoveCase(true);
+          }, 10);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (mainRef.current) {
+      observer.observe(mainRef.current);
+    }
+
+    return () => {
+      if (mainRef.current) {
+        observer.unobserve(mainRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="container">
-      <div className="guarantee">
+      <div className={`guarantee ${showMain ? 'visible' : ''}`} ref={mainRef}>
         <div className="guarantee__header">
           <p className="guarantee__header--title">Гарантия</p>
           <p className="guarantee__header--description">
@@ -24,7 +51,7 @@ const Guarantee = () => {
             </h3>
           </div>
 
-          <div className="guarantee__main--case">
+          <div className={`guarantee__main--case ${moveCase ? 'moved' : ''}`}>
             <div>
               <p className="case-title">Кейс</p>
               <p className="case-description">

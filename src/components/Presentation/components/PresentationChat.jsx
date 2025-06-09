@@ -51,15 +51,6 @@ const PresentationChat = ({ chatIsVisible }) => {
     scrollToBottom();
   }, [messages]);
 
-  // useEffect(() => {
-  //   fetch('https://ipapi.co/json/')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log('Город пользователя:', data.city);
-  //     })
-  //     .catch((err) => console.error('Ошибка получения города:', err));
-  // }, []);
-
   const handleUnavailableFeature = () => {
     setShowToast(true);
     setTimeout(() => setShowToast(false), TOAST_DURATION);
@@ -81,55 +72,36 @@ const PresentationChat = ({ chatIsVisible }) => {
 
     setInputValue('');
 
-    // для теста, здесь запрос на сервер ////////////////////////////////////////////////
-    const BOT_REPLY = 'Спасибо за сообщение! Я вас понял.';
+    try {
+      const response = await fetch('http://62.113.36.252/api/chatgpt/web', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: trimmed }),
+      });
 
-    setTimeout(() => {
-      setMessages((prev) => [...prev, { sender: 'bot', text: BOT_REPLY }]);
-    }, 1000);
-    /////////////////////////////////////////////////////////////////////////////////////
+      if (!response.ok) {
+        throw new Error('Сервер вернул ошибку');
+      }
 
-    // const reqData = {
-    //   user_request: trimmed,
-    //   user_id: '',
-    //   file_id: '',
-    //   city: '',
-    //   file_type: 'text',
-    // };
-    //
-    // try {
-    //   const response = await fetch(
-    //     'http://62.113.36.252/api/chatgpt/telegram/',
-    //     {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify(reqData),
-    //     }
-    //   );
-    //
-    //   if (!response.ok) {
-    //     throw new Error('Сервер вернул ошибку');
-    //   }
-    //
-    //   const data = await response.json();
-    //
-    //   if (!data || !data.reply) {
-    //     throw new Error('Некорректный ответ сервера');
-    //   }
-    //
-    //   setMessages((prev) => [...prev, { sender: 'bot', text: data }]);
-    // } catch (error) {
-    //   console.error('Ошибка при отправке запроса:', error);
-    //   setMessages((prev) => [
-    //     ...prev,
-    //     {
-    //       sender: 'bot',
-    //       text: 'Произошла ошибка при обработке запроса. Пожалуйста, попробуйте позже.',
-    //     },
-    //   ]);
-    // }
+      const data = await response.json();
+
+      if (!data || !data.result) {
+        throw new Error('Некорректный ответ сервера');
+      }
+
+      setMessages((prev) => [...prev, { sender: 'bot', text: data.result }]);
+    } catch (error) {
+      console.error('Ошибка при отправке запроса:', error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: 'bot',
+          text: 'Произошла ошибка при обработке запроса. Пожалуйста, попробуйте позже.',
+        },
+      ]);
+    }
   };
 
   const handleKeyDown = (e) => {

@@ -21,7 +21,7 @@ const Contacts = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     if (contactRef.current) observer.observe(contactRef.current);
