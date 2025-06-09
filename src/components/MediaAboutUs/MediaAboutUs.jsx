@@ -36,14 +36,37 @@ const MediaAboutUs = () => {
   }, []);
 
   const mediaItems = [
-    { name: 'YAGLA', img: 'YAGLA.svg', class: 'yagla' },
-    { name: 'ADPASS', img: 'ADPASS.svg', class: 'adpass' },
-    { name: 'TenChat', img: 'tenchat.svg' },
-    { name: 'WORKSPACE', img: 'workspace.svg' },
-    { name: 'VC.RU', img: 'VC.svg' },
-    { name: 'SPARK.RU', img: 'SPARK.svg', class: 'spark' },
-    { name: 'DTF', img: 'dtf.svg' },
-    { name: 'Sostav', img: 'sostav.svg' },
+    {
+      name: 'YAGLA',
+      img: 'YAGLA.svg',
+      class: 'yagla',
+      link: 'https://yagla.ru/blog/user/1151-grishutkin-maksim/',
+    },
+    {
+      name: 'ADPASS',
+      img: 'ADPASS.svg',
+      class: 'adpass',
+      link: 'https://adpass.ru/company/lida-ili-da/',
+    },
+    { name: 'TenChat', img: 'tenchat.svg', link: 'https://tenchat.ru/4504959' },
+    {
+      name: 'WORKSPACE',
+      img: 'workspace.svg',
+      link: 'https://workspace.ru/id/maksim-grishutkin/?from=work',
+    },
+    { name: 'VC.RU', img: 'VC.svg', link: 'https://vc.ru/id4848273' },
+    {
+      name: 'SPARK.RU',
+      img: 'SPARK.svg',
+      class: 'spark',
+      link: 'https://spark.ru/user/258829/blog/254717/pochemu-lida-ili-da-obje',
+    },
+    { name: 'DTF', img: 'dtf.svg', link: 'https://dtf.ru/id2750493' },
+    {
+      name: 'Sostav',
+      img: 'sostav.svg',
+      link: 'https://www.sostav.ru/blogs/281808',
+    },
   ];
 
   return (
@@ -65,7 +88,9 @@ const MediaAboutUs = () => {
                   alt={media.name}
                 />
               </div>
-              <p>{media.name}</p>
+              <a href={media.link} target="_blank" rel="noopener noreferrer">
+                {media.name}
+              </a>
             </div>
           ))}
         </div>
