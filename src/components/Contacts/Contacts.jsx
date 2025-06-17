@@ -103,7 +103,6 @@ const Contacts = () => {
             <img src="/assets/icons/phone.svg" alt="" />
             <div>
               <p>+7 (968) 882-51-03</p>
-              <p>+7 (995) 000-53-03</p>
             </div>
           </div>
         </div>

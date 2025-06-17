@@ -1,0 +1,37 @@
+.cookie-wrapper {
+  border-radius: 16px 16px 0 0;
+  background-color: grey;
+
+  width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+
+  font-family: 'Exo 2', sans-serif;
+
+  p:first-child {
+    color: #000;
+
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+  }
+
+  button {
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

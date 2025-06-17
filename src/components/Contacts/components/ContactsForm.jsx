@@ -71,10 +71,14 @@ const ContactsForm = () => {
 
       <div>
         <input
-          type="text"
+          type="tel"
+          inputMode="tel"
           placeholder="+7 (___)___-__-__"
           className="contacts-form__form--input"
           {...register('phone_number')}
+          onChange={(e) => {
+            e.target.value = e.target.value.replace(/[A-Za-zА-Яа-я]/g, '');
+          }}
         />
         <p className="input-error-message">{errors.phone_number?.message}</p>
       </div>

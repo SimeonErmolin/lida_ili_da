@@ -29,13 +29,23 @@ const Footer = () => {
             >
               Договор-оферта
             </a>
-            <a href="#" className="footer__section--links">
+            <a
+              href="/Cookie.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__section--links"
+            >
               Соглашение Cookie
             </a>
             <a href="#" className="footer__section--links">
               Согласие на рассылку
             </a>
-            <a href="#" className="footer__section--links">
+            <a
+              href="/policy-conf.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__section--links"
+            >
               Положение о конфиденциальности
             </a>
           </div>

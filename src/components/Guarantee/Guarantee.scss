@@ -63,9 +63,9 @@
       background-image: url('/public/assets/bg/guarantee/case.png');
       background-size: contain;
       background-repeat: no-repeat;
+      //background-position: center;
       background-position-x: right;
       font-weight: 600;
-
       opacity: 0;
       transform: translateX(-100%);
       transition: transform 1s ease-in-out 0.8s, opacity 0.5s ease-in-out 0.8s;
@@ -87,9 +87,9 @@
       }
 
       .case-btn {
+        background-color: #FFFFFF;
         cursor: pointer;
         border-radius: 50%;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -141,7 +141,9 @@
 
       &--case {
         margin: 0 auto;
-        padding: 20px;
+        padding: 16px 20px 15px 19px;
+        //border-radius: 21px;
+        width: 240px;
 
         .case-title {
           font-size: 18px;
@@ -170,8 +172,8 @@
         }
 
         .case-btn {
-          width: 25px;
-          height: 25px;
+          width: 24px;
+          height: 24px;
 
           img {
             width: 8px;
@@ -207,7 +209,9 @@
       }
 
       &--case {
-        padding: 30px;
+        width: auto;
+        padding: 27px 29.3px;
+        //border-radius: 36px;
 
         .case-title {
           font-size: 32px;
