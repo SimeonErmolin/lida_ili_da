@@ -11,9 +11,8 @@
   display: flex;
   overflow: visible;
 
-
   .page-header {
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: 'Bebas Neue Cyrillic', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -28,7 +27,7 @@
     align-items: center;
 
     &__text {
-      color: #FFFFFF;
+      color: #ffffff;
       text-transform: uppercase;
       font-family: 'Bebas Neue Cyrillic', sans-serif;
       font-weight: 400;
@@ -45,13 +44,13 @@
       text-decoration: none;
       border-radius: 999px;
       border: none;
-      background: #FFF;
+      background: #fff;
     }
   }
 
   .header-list {
     &__title {
-      color: #FFF;
+      color: #fff;
       font-family: 'Exo 2', sans-serif;
       font-weight: 600;
     }
@@ -74,7 +73,7 @@
         background: rgba(255, 255, 255, 0.14);
         backdrop-filter: blur(20.81812286376953px);
 
-        color: #FFFFFF;
+        color: #ffffff;
         font-family: 'Exo 2', sans-serif;
         font-weight: 300;
       }
@@ -89,7 +88,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       text-decoration: none;
 
       white-space: nowrap;
@@ -144,7 +143,7 @@
       position: absolute;
       border-radius: 29px;
       align-items: flex-start;
-      color: #FFFFFF;
+      color: #ffffff;
       text-align: center;
       font-family: 'Exo 2', sans-serif;
       font-weight: 500;
@@ -155,7 +154,11 @@
 
       &__2 {
         border: 0.934px solid rgba(255, 255, 255, 0.26);
-        background: radial-gradient(68.46% 53.58% at 50% 50%, rgba(128, 132, 255, 0.70) 0%, rgba(47, 51, 171, 0.70) 100%);
+        background: radial-gradient(
+          68.46% 53.58% at 50% 50%,
+          rgba(128, 132, 255, 0.7) 0%,
+          rgba(47, 51, 171, 0.7) 100%
+        );
         backdrop-filter: blur(18.685344696044922px);
 
         &--description {
@@ -183,14 +186,16 @@
     }
 
     .page-header {
-      font-size: 24px;
+      font-size: 22px;
+      font-weight: 600;
     }
 
     .page-header-addon {
       gap: 10px;
 
       &__text {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
       }
       &__btn {
         padding: 8px 12px;
@@ -212,7 +217,6 @@
       margin-top: 350px;
       justify-content: center;
       gap: 12px;
-
 
       &__btn {
         padding: 14px 24px;
@@ -283,14 +287,16 @@
     }
 
     .page-header {
-      font-size: 50px;
+      font-size: 44px;
+      font-weight: 600;
     }
 
     .page-header-addon {
       gap: 32px;
 
       &__text {
-        font-size: 28px;
+        font-size: 22px;
+        font-weight: 600;
       }
       &__btn {
         padding: 10px 26px;
@@ -371,12 +377,14 @@
     gap: 25px;
 
     .page-header {
-      font-size: 70px;
+      font-size: 52px;
+      font-weight: 600;
     }
 
     .page-header-addon {
       &__text {
-        font-size: 40px;
+        font-size: 26px;
+        font-weight: 600;
       }
     }
 
@@ -409,7 +417,6 @@
 
     .flying-blocks {
       .flying-block {
-
         &__1 {
           right: 0;
           bottom: 300px;
@@ -438,12 +445,14 @@
     padding: 70px 0;
 
     .page-header {
-      font-size: 80px;
+      font-size: 56px;
+      font-weight: 600;
     }
 
     .page-header-addon {
       &__text {
-        font-size: 50px;
+        font-size: 32px;
+        font-weight: 600;
       }
     }
 
@@ -517,6 +526,17 @@
     padding: 100px 0;
     flex-direction: row;
     gap: 50px;
+
+    .page-header {
+      font-size: 62px;
+      font-weight: 600;
+    }
+    .page-header-addon {
+      &__text {
+        font-size: 40px;
+        font-weight: 600;
+      }
+    }
 
     .logo {
       margin-top: 20px;

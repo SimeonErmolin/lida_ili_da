@@ -8,7 +8,7 @@ const Cookie = () => {
     <>
       {isShow && (
         <div className="cookie-wrapper">
-          <img src="public/assets/icons/funnyCookie.svg" alt="" />
+          <img src="/assets/icons/funnyCookie.svg" alt="" />
 
           <div>
             <p>Мы используем cookie-файлы</p>

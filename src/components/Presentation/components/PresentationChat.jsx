@@ -188,8 +188,23 @@ const PresentationChat = ({ chatIsVisible }) => {
 
       {showToast && (
         <div className="toast">
-          В веб-версии эта функция недоступна. Откройте бот в Telegram, чтобы
-          воспользоваться всеми возможностями.
+          <p>Эта функция доступна только в Telegram</p>
+          <p>Откройте бота там и получите доступ ко всем фишкам!</p>
+
+          <div className="toast__btns">
+            <button className="toast__btns--btn">
+              <p>Telegram</p>
+              <img src="/assets/icons/chat/telegram.svg" alt="" />
+            </button>
+            <button className="toast__btns--btn">
+              <p>WhatsApp</p>
+              <img src="/assets/icons/chat/whatsapp.svg" alt="" />
+            </button>
+            <button className="toast__btns--btn">
+              <p>VK</p>
+              <img src="/assets/icons/chat/vk.svg" alt="" />
+            </button>
+          </div>
         </div>
       )}
     </section>

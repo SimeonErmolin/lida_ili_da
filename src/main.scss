@@ -12,16 +12,21 @@ html {
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
-html, body, h1, h3, h4, p {
+html,
+body,
+h1,
+h3,
+h4,
+p {
   margin: 0;
   padding: 0;
 }
 
 .App {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .section-header {
@@ -30,9 +35,8 @@ html, body, h1, h3, h4, p {
   font-family: 'Bebas Neue Cyrillic', sans-serif;
   font-weight: 400;
 
-
   &--white {
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 0;
   }
 }
@@ -41,7 +45,6 @@ html, body, h1, h3, h4, p {
   margin-top: 5px;
   color: #ff0000;
 }
-
 
 @media (min-width: 360px) {
   .container {
@@ -52,6 +55,7 @@ html, body, h1, h3, h4, p {
   .section-header {
     font-size: 36px;
     margin-bottom: 40px;
+    font-weight: 600;
   }
 
   .input-error-message {
@@ -66,8 +70,9 @@ html, body, h1, h3, h4, p {
   }
 
   .section-header {
-    font-size: 80px;
+    font-size: 52px;
     margin-bottom: 80px;
+    font-weight: 600;
   }
 
   .input-error-message {
@@ -83,6 +88,7 @@ html, body, h1, h3, h4, p {
 
   .section-header {
     font-size: 64px;
+    font-weight: 600;
   }
 }
 
@@ -90,10 +96,20 @@ html, body, h1, h3, h4, p {
   .container {
     max-width: 1360px;
   }
+
+  .section-header {
+    font-size: 68px;
+    font-weight: 600;
+  }
 }
 
 @media (min-width: 1920px) {
   .container {
     max-width: 1920px;
+  }
+
+  .section-header {
+    font-size: 72px;
+    font-weight: 600;
   }
 }
