@@ -1,7 +1,14 @@
 import React from 'react';
 import EditableField from './EditableField.jsx';
 
-const TemplateOrderFormed = ({ link, paymentStatus, name, phone, email }) => {
+const TemplateOrderFormed = ({
+  link,
+  paymentStatus,
+  name,
+  phone,
+  email,
+  paymentLink,
+}) => {
   const handleCopyClick = () => {
     navigator.clipboard.writeText(link).catch((err) => {
       console.error('Ошибка при копировании:', err);
@@ -71,6 +78,8 @@ const TemplateOrderFormed = ({ link, paymentStatus, name, phone, email }) => {
 
       {paymentStatus !== 'paid' && (
         <button className="order-formed__btn">Перейти к оплате</button>
+
+        // <a href={paymentLink}>Перейти к оплате</a>
       )}
     </div>
   );

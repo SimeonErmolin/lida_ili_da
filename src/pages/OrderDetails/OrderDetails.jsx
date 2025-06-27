@@ -38,6 +38,8 @@ const OrderDetails = () => {
 
         const paymentLink = await paymentLinkResponse.json();
 
+        // ПРОВЕРИТЬ ЧТО В ЭТОМ paymentLink
+
         setUserData(applicationData);
         setPaymentLinkData(paymentLink);
       } catch (error) {
@@ -68,11 +70,11 @@ const OrderDetails = () => {
       children={
         <TemplateOrderFormed
           link={identifier}
-          paymentStatus={userData.payment_status || 'awaits'}
+          paymentStatus={userData.payment_status || 'pending'}
           name={userData.fio}
           phone={userData.phone_number}
           email={userData.email}
-          paymentLink={paymentLinkData}
+          // paymentLink={paymentLinkData}
         />
       }
     />

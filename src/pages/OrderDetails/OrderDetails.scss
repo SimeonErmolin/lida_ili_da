@@ -3,19 +3,18 @@
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100%;
   background: rgba(83, 82, 82, 0.93);
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 999;
   animation: fadeIn 0.3s ease-out;
 
   &__main {
     width: 100vw;
     max-width: 500px;
-    height: 100vh;
+    min-height: 100%;
 
     overflow-y: auto;
     scrollbar-width: none;
@@ -61,7 +60,7 @@
     &--description-tariff {
       z-index: 10;
       box-sizing: border-box;
-      height: 90vh;
+      min-height: 90%;
       max-height: 930px;
       padding: 87px 71px;
       border-radius: 32px;
@@ -139,7 +138,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        min-height: 100%;
         background: rgba(83, 82, 82, 0.93);
         z-index: 9999;
         display: flex;
@@ -612,17 +611,20 @@
   .order-details {
     position: fixed;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     background: rgba(83, 82, 82, 0.93);
     backdrop-filter: blur(4px);
 
     &__main {
+      height: 100vh;
       padding: 0 30px;
       margin: auto;
       max-width: 100vw;
       max-height: 90vh;
+      min-height: auto;
 
       &--description-tariff {
+        height: 90vh;
         padding: 57px 41px;
       }
 
@@ -634,6 +636,10 @@
 
         margin: 28px 0 20px -30px;
         padding: 50px 30px 30px 60px;
+
+        .tariff-list-modal {
+          height: 100vh;
+        }
       }
 
       &--btn {
