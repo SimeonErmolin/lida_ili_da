@@ -14,7 +14,9 @@ const PaymentRejected = () => {
             alt=""
             className="payment-rejected__image"
           />
+
           <p className="payment-rejected__title">Не удалось оплатить</p>
+
           <p className="payment-rejected__description">
             Оформите новый заказ <br />в разделе «Тарифы»
           </p>
