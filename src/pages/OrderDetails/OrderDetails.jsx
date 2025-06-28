@@ -10,7 +10,6 @@ const OrderDetails = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const [paymentLinkData, setPaymentLinkData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
@@ -27,24 +26,10 @@ const OrderDetails = () => {
 
         const applicationData = await applicationResponse.json();
 
-        const paymentLinkResponse = await fetch(
-          `${BaseUrl}application/payment-link/?identifier=${identifier}`
-        );
-
-        if (!paymentLinkResponse.ok) {
-          setNotFound(true);
-          return;
-        }
-
-        const paymentLink = await paymentLinkResponse.json();
-
         setUserData(applicationData);
-        setPaymentLinkData(paymentLink.payment_link);
       } catch (error) {
         console.error('Ошибка при загрузке данных:', error);
         setNotFound(true);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -56,8 +41,6 @@ const OrderDetails = () => {
       navigate('/404');
     }
   }, [notFound, navigate]);
-
-  if (loading) return <div>Загрузка...</div>;
 
   if (!userData) return null;
 

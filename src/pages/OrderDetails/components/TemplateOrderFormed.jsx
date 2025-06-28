@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import EditableField from './EditableField.jsx';
+import { BaseUrl } from '../../../App.jsx';
+import { useNavigate } from 'react-router-dom';
 
-const TemplateOrderFormed = ({
-  link,
-  paymentStatus,
-  name,
-  phone,
-  email,
-  paymentLink,
-}) => {
+const TemplateOrderFormed = ({ link, paymentStatus, name, phone, email }) => {
+  const navigate = useNavigate();
+  const [notFound, setNotFound] = useState(false);
+
   const handleCopyClick = () => {
     navigator.clipboard
       .writeText(`https://lidailida.ru/orders${link}`)
@@ -16,6 +14,36 @@ const TemplateOrderFormed = ({
         console.error('Ошибка при копировании:', err);
       });
   };
+
+  const proceedToPayment = async () => {
+    try {
+      const paymentLinkResponse = await fetch(
+        `${BaseUrl}application/payment-link/?identifier=${link}`
+      );
+
+      if (!paymentLinkResponse.ok) {
+        setNotFound(true);
+        return;
+      }
+
+      const paymentLink = await paymentLinkResponse.json().payment_link;
+
+      if (paymentLink) {
+        window.location.href = paymentLink;
+      } else {
+        alert('Ссылка на оплату не получена, попробуйте снова');
+      }
+    } catch (error) {
+      console.error('Ошибка при загрузке данных:', error);
+      setNotFound(true);
+    }
+  };
+
+  useEffect(() => {
+    if (notFound) {
+      navigate('/404');
+    }
+  }, [notFound, navigate]);
 
   return (
     <div className="order-formed">
@@ -82,9 +110,9 @@ const TemplateOrderFormed = ({
       </div>
 
       {paymentStatus === 'pending' && (
-        <a href={paymentLink} className="order-formed__btn">
+        <button className="order-formed__btn" onClick={proceedToPayment}>
           Перейти к оплате
-        </a>
+        </button>
       )}
     </div>
   );
