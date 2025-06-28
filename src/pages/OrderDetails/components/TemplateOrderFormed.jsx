@@ -10,9 +10,11 @@ const TemplateOrderFormed = ({
   paymentLink,
 }) => {
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(link).catch((err) => {
-      console.error('Ошибка при копировании:', err);
-    });
+    navigator.clipboard
+      .writeText(`https://lidailida.ru/orders${link}`)
+      .catch((err) => {
+        console.error('Ошибка при копировании:', err);
+      });
   };
 
   return (
