@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Tariffs.scss';
-import TemplatePayment from '../../../OrderDetails/components/TemplatePayment.jsx';
 import TemplatePaymentForm from '../../../OrderDetails/components/TemplatePaymentForm.jsx';
 import TemplatePaymentModal from '../../../OrderDetails/components/TemplatePaymentModal.jsx';
 
@@ -8,7 +7,7 @@ const Tariffs = () => {
   const sectionRef = useRef(null);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  const [selectedTariff, setSelectedTariff] = useState(null);
+  const [selectedTariffCost, setSelectedTariffCost] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const smoothScrollTo = (targetY, duration = 2000) => {
@@ -115,7 +114,7 @@ const Tariffs = () => {
 
                     <button
                       onClick={() => {
-                        setSelectedTariff('base');
+                        setSelectedTariffCost('1');
                         setModalIsOpen(true);
                       }}
                     >
@@ -176,7 +175,7 @@ const Tariffs = () => {
 
                     <button
                       onClick={() => {
-                        setSelectedTariff('optimal');
+                        setSelectedTariffCost('20001');
                         setModalIsOpen(true);
                       }}
                     >
@@ -233,7 +232,7 @@ const Tariffs = () => {
                     <p>40 001 ₽/мес.</p>
                     <button
                       onClick={() => {
-                        setSelectedTariff('maximum');
+                        setSelectedTariffCost('40001');
                         setModalIsOpen(true);
                       }}
                     >
@@ -289,10 +288,12 @@ const Tariffs = () => {
       </div>
 
       <TemplatePaymentModal
-        currentTariff={selectedTariff}
+        currentTariffCost={selectedTariffCost}
         isOpen={modalIsOpen}
         onClose={() => setModalIsOpen(false)}
-        children={<TemplatePaymentForm />}
+        children={
+          <TemplatePaymentForm currentTariffCost={selectedTariffCost} />
+        }
       />
     </>
   );

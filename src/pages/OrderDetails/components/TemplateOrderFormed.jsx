@@ -39,35 +39,38 @@ const TemplateOrderFormed = ({
           <p className="status-payment__title">Статус оплаты</p>
           <div className="status-payment__status">
             <img
-              src={`/assets/order/${paymentStatus === 'paid' ? 'green.svg' : 'orange.svg'}`}
+              src={`/assets/order/${paymentStatus === 'pending' ? 'orange.svg' : 'green.svg'}`}
               alt=""
             />
-            <p>{paymentStatus === 'paid' ? 'Оплачено' : 'Ожидает оплаты'}</p>
+            <p>{paymentStatus === 'pending' ? 'Ожидает оплаты' : 'Оплачено'}</p>
           </div>
         </div>
       </div>
 
       <div className="order-formed__check-data">
         <p className="order-formed__check-data--title">
-          {paymentStatus === 'paid'
-            ? 'Персональные данные'
-            : 'Проверьте введённые данные перед оплатой'}
+          {paymentStatus === 'pending'
+            ? 'Проверьте введённые данные перед оплатой'
+            : 'Персональные данные'}
         </p>
 
         <EditableField
           label="ФИО"
           initialValue={name}
           paymentStatus={paymentStatus}
+          identifier={link}
         />
         <EditableField
           label="Телефон"
           initialValue={phone}
           paymentStatus={paymentStatus}
+          identifier={link}
         />
         <EditableField
           label="Email"
           initialValue={email}
           paymentStatus={paymentStatus}
+          identifier={link}
         />
       </div>
 
@@ -76,10 +79,10 @@ const TemplateOrderFormed = ({
         <p>Чтобы изменить тариф вернитесь к разделу «Тарифы»</p>
       </div>
 
-      {paymentStatus !== 'paid' && (
-        <button className="order-formed__btn">Перейти к оплате</button>
-
-        // <a href={paymentLink}>Перейти к оплате</a>
+      {paymentStatus === 'pending' && (
+        <a href={paymentLink} className="order-formed__btn">
+          Перейти к оплате
+        </a>
       )}
     </div>
   );

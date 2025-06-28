@@ -19,7 +19,7 @@ const schema = yup.object().shape({
     .oneOf([true], 'Согласитесь с условиями оферты'),
 });
 
-const TemplatePaymentForm = () => {
+const TemplatePaymentForm = ({ currentTariffCost }) => {
   const isMobile = window.innerWidth < 1024;
 
   const {
@@ -34,17 +34,18 @@ const TemplatePaymentForm = () => {
 
   const onSubmit = async (data) => {
     try {
+      const payload = {
+        ...data,
+        amount: currentTariffCost,
+      };
+
       const response = await fetch(`${BaseUrl}application`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       const { identifier } = await response.json();
-
-      alert(
-        `Идентификатор: ${identifier}\nФИО: ${data.fio}\nТелефон: ${data.phone_number}\nEmail: ${data.email}\nСогласие: ${data.personal_data_agreement ? 'Да' : 'Нет'}`
-      );
 
       if (response.ok) {
         window.location.href = `/orders/${identifier}`;

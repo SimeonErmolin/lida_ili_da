@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from 'react-router';
 import Landing from './pages/Landing/Landing.jsx';
 import OrderDetails from './pages/OrderDetails/OrderDetails.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
+import PaymentRejected from './pages/PaymentRejected/PaymentRejected.jsx';
+import PaymentSuccess from './pages/PaymentSuccess/PaymentSuccess.jsx';
 
 export const BaseUrl = 'https://lidailida.ru/api/';
 
@@ -43,7 +45,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/orders/:identifier" element={<OrderDetails />} />
-        <Route path="/order" element={<OrderDetails />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/payment-rejected" element={<PaymentRejected />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

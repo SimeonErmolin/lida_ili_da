@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import TemplateMobileModal from './TemplateMobileModal.jsx';
 
 const tariffsData = {
-  base: {
+  1: {
     title: 'Оформить тариф Базовый',
     cost: '18% от продаж',
     list: [
@@ -12,7 +12,7 @@ const tariffsData = {
       'Еженедельный отчёт о лидах',
     ],
   },
-  optimal: {
+  20001: {
     title: 'Оформить тариф Оптимальнй',
     cost: '20 001 ₽/мес.',
     list: [
@@ -27,7 +27,7 @@ const tariffsData = {
       'Еженедельный отчёт о лидах',
     ],
   },
-  maximum: {
+  40001: {
     title: 'Оформить тариф Максимум',
     cost: '40 001 ₽/мес.',
     list: [
@@ -50,8 +50,8 @@ const tariffsData = {
   },
 };
 
-const TemplatePayment = ({ currentTariff, isModal, onClose, children }) => {
-  const tariffData = tariffsData[currentTariff];
+const TemplatePayment = ({ currentTariffCost, isModal, onClose, children }) => {
+  const tariffData = tariffsData[currentTariffCost];
 
   const [showListModal, setShowListModal] = useState(false);
   const isMobile = window.innerWidth < 1024;

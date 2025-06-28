@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 import { lockScroll, unlockScroll } from '../../../helpers/scrollLock.js';
 import TemplatePayment from './TemplatePayment.jsx';
 
-const TemplatePaymentModal = ({ currentTariff, isOpen, onClose, children }) => {
+const TemplatePaymentModal = ({
+  currentTariffCost,
+  isOpen,
+  onClose,
+  children,
+}) => {
   useEffect(() => {
     if (isOpen) {
       lockScroll();
@@ -30,7 +35,7 @@ const TemplatePaymentModal = ({ currentTariff, isOpen, onClose, children }) => {
 
   return (
     <TemplatePayment
-      currentTariff={currentTariff}
+      currentTariffCost={currentTariffCost}
       isModal={true}
       onClose={onClose}
       children={children}

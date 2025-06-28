@@ -17,7 +17,7 @@ const OrderDetails = () => {
     const fetchOrderData = async () => {
       try {
         const applicationResponse = await fetch(
-          `${BaseUrl}application?identifier=${identifier}`
+          `${BaseUrl}application/?identifier=${identifier}`
         );
 
         if (!applicationResponse.ok) {
@@ -28,7 +28,7 @@ const OrderDetails = () => {
         const applicationData = await applicationResponse.json();
 
         const paymentLinkResponse = await fetch(
-          `${BaseUrl}application/payment-link?identifier=${identifier}`
+          `${BaseUrl}application/payment-link/?identifier=${identifier}`
         );
 
         if (!paymentLinkResponse.ok) {
@@ -38,10 +38,8 @@ const OrderDetails = () => {
 
         const paymentLink = await paymentLinkResponse.json();
 
-        // ПРОВЕРИТЬ ЧТО В ЭТОМ paymentLink
-
         setUserData(applicationData);
-        setPaymentLinkData(paymentLink);
+        setPaymentLinkData(paymentLink.payment_link);
       } catch (error) {
         console.error('Ошибка при загрузке данных:', error);
         setNotFound(true);
@@ -65,16 +63,16 @@ const OrderDetails = () => {
 
   return (
     <TemplatePayment
-      currentTariff="maximum"
+      currentTariffCost={userData.amount}
       isModal={false}
       children={
         <TemplateOrderFormed
           link={identifier}
-          paymentStatus={userData.payment_status || 'pending'}
+          paymentStatus={userData.payment_status}
           name={userData.fio}
           phone={userData.phone_number}
           email={userData.email}
-          // paymentLink={paymentLinkData}
+          paymentLink={paymentLinkData}
         />
       }
     />
