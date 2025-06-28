@@ -1,7 +1,10 @@
 import React from 'react';
 import './PaymentSuccess.scss';
+import { useNavigate } from 'react-router-dom';
 
 const PaymentSuccess = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="payment-success-wrapper">
       <div>
