@@ -26,10 +26,10 @@ const TemplateOrderFormed = ({ link, paymentStatus, name, phone, email }) => {
         return;
       }
 
-      const paymentLink = await paymentLinkResponse.json().payment_link;
+      const paymentLink = await paymentLinkResponse.json();
 
       if (paymentLink) {
-        window.location.href = paymentLink;
+        window.location.href = paymentLink.payment_link;
       } else {
         alert('Ссылка на оплату не получена, попробуйте снова');
       }
