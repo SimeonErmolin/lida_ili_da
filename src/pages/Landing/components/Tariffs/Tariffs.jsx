@@ -133,7 +133,7 @@ const Tariffs = () => {
                   <div className="tariff__main--list">
                     <div className="item">
                       <img src="/assets/icons/star.svg" alt="" />
-                      <p>Всё из тарифа «Старт»</p>
+                      <p>Всё из тарифа «Базовый»</p>
                     </div>
 
                     <div className="item">
@@ -194,7 +194,7 @@ const Tariffs = () => {
                   <div className="tariff__main--list">
                     <div className="item">
                       <img src="/assets/icons/star.svg" alt="" />
-                      <p>Всё из тарифа «Стандарт»</p>
+                      <p>Всё из тарифа «Оптимальный»</p>
                     </div>
 
                     <div className="item">
